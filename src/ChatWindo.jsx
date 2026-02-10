@@ -14,7 +14,7 @@ import Chat from './Chat.jsx';
 //import Chat from './Chat.jsx';
 const ChatWindo = () => {
   const [loading, setLoading] = useState(true);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const { prompts, setPrompts, responses, setResponses, currThread, setCurrThread, previousChats, setPreviousChats ,setNewChat} = useContext(MyContext);
   const getResponse = async () => {
 setNewChat(false);
