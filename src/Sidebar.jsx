@@ -4,7 +4,8 @@ import { MyContext } from './Mycontex.jsx';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import logo from 'src/assets/chat-gpt.png'
+import logo from '../assets/chat-gpt.png'
+
 
 const Sidebar = () => {
   const { allThreads, setAllThreads, currThread, newChat, setNewChat, setPrompts, responses, setResponses, setCurrThread, setPreviousChats } = useContext(MyContext);
