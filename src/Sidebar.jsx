@@ -4,7 +4,7 @@ import { MyContext } from './Mycontex.jsx';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import logo from '../assets/chat-gpt.png'
+import logo from './assets/chat-gpt.png'
 
 
 const Sidebar = () => {
