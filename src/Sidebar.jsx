@@ -4,6 +4,7 @@ import { MyContext } from './Mycontex.jsx';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import logo from 'src/assets/chat-gpt.png'
 
 const Sidebar = () => {
   const { allThreads, setAllThreads, currThread, newChat, setNewChat, setPrompts, responses, setResponses, setCurrThread, setPreviousChats } = useContext(MyContext);
@@ -59,7 +60,7 @@ const Sidebar = () => {
     <>
       <section className="sidebar">
         <button onClick={createNewChat}>
-          <img src="src/assets/chat-gpt.png" alt="Sidebar Icon" className='logo'></img>
+          <img src={logo} alt="Sidebar Icon" className='logo'></img>
           <span> <i className="fa-solid fa-pen-to-square" style={{ color: "#ffffff" }}></i></span>
 
         </button>
