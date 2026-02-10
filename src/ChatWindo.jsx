@@ -32,7 +32,7 @@ setNewChat(false);
 
     };
     try {
-      const response = await fetch('http://localhost:3000/api/chats', options);
+      const response = await fetch('https://gpt-ai-backend-77w5.onrender.com/api/chats', options);
       const data = await response.json();
       console.log(data.reply);
       setResponses(data.reply);
