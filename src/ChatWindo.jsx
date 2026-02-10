@@ -77,7 +77,7 @@ const handelProfileClick=()=>{
       <div className="chat-window">
         <div className="navbar">
 
-          <span>sigmagpt &nbsp; <i className="fa-solid fa-angle-down"></i> </span>
+          <span>Dev tool &nbsp; <i className="fa-solid fa-angle-down"></i> </span>
           <div className="userIcon" onClick={handelProfileClick}>
             <span><i className="fa-solid fa-user" id="ui"></i></span>
           </div>
