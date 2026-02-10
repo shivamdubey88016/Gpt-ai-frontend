@@ -9,7 +9,7 @@ const Sidebar = () => {
   const { allThreads, setAllThreads, currThread, newChat, setNewChat, setPrompts, responses, setResponses, setCurrThread, setPreviousChats } = useContext(MyContext);
   const getAllThreads = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/threads');
+      const response = await fetch('https://gpt-ai-backend-77w5.onrender.com/api/threads');
       const data = await response.json();
       const threads = data.map(thread => ({
         threadId: thread.threadId,
@@ -39,7 +39,7 @@ const Sidebar = () => {
     setCurrThread(newThreadId);
 
     try {
-      const response = await fetch(`http://localhost:3000/api/threads/${newThreadId}`);
+      const response = await fetch(`https://gpt-ai-backend-77w5.onrender.com/${newThreadId}`);
       const data = await response.json();
 
 
@@ -75,7 +75,7 @@ const Sidebar = () => {
                 <i className="fa-solid fa-delete-left" id="delete" onClick={(e)=>{
                   //delete thread
                   e.stopPropagation();
-                  fetch(`http://localhost:3000/api/threads/${thread.threadId}`,{
+                  fetch(`https://gpt-ai-backend-77w5.onrender.com/${thread.threadId}`,{
                     method:'DELETE'
                   }).then(res=>res.json())
                   .then(data=>{
